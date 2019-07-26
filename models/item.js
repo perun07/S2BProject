@@ -2,8 +2,6 @@ const mongoose = require('mongoose'); // require mongoose
 
 const Schema = mongoose.Schema; //Schema Constructor
 
-
-
 const itemSchema = new Schema({
     type: String, //console, equipment or game
     platform: String, //what platform your item is used for

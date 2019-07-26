@@ -10,14 +10,18 @@ const Item = require('../models/item.js');
 // In this case we are requesting the account page for the user
 // This page has the users information and call to action to post items for sale
 router.get('/account', (req, res) => {
-      res.send('This is the user account page')
+  Item.find({}, (err, allItem)=>{
+    res.send('this is the user account page', {
+      item: allItem,
     })
+  })
+})
 
 // Item Submission Page
 // This is the page the user inputs the items for sale
 // when the user hits submit they are sent back to the /account page
-router.get('/account/sellitems', (req, res) => {
-  res.send('This is the item submission page')
+router.get('/account/sell', (req, res) => {
+  res.send('This is the item selling page')
 });
 
 // Create

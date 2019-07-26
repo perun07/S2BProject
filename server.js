@@ -12,6 +12,9 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
+const itemController = require('./controller/itemController.js');
+app.use('/account', itemController);
+
 const PORT = 3000;
 const MONGODB_URI = 'mongodb://localhost/' + 'items';
 
