@@ -32,4 +32,38 @@ res.redirect('/account')
   })  
 })
 
+//Delete
+router.delete('/:id', (req, res) => {
+  Item.findOneAndDelete({_id:req.params.id}, (err, deletedItem) => {
+    res.redirect('/account')
+  })
+})
+
+//Edit
+router.get('/:id/edit', (req, res) => {
+  Item.findById(req.params.id, (err, foundItem) => {
+    res.render('edit.ejs', {
+      oneItem: foundItem
+    })
+  })
+})
+
+//Put
+router.put('/:id', (req, res) => {
+  Item.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, edited) => {
+    res.redirect('/account')
+  })
+})
+
+//Show
+router.get('/:id', (req, res) => {
+  Item.findById(req.params.id, (err, foundItem) => {
+    res.render('show.ejs', {
+      oneItem: foundItem
+    })
+  })
+})
+
+
+
 module.exports = router;
