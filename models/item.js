@@ -13,5 +13,5 @@ const itemSchema = new Schema({
 
 const Item = mongoose.model('Item', itemSchema);
 
-//Exported for access in `app.js`
+//Exported for access in `server.js`
 module.exports = Item;

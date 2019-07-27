@@ -9,20 +9,21 @@ const Item = require('../models/item.js');
 // Get method to request the information from the server
 // In this case we are requesting the account page for the user
 // This page has the users information and call to action to post items for sale
-router.get('/', (req, res) => {
+// dont need the /account because we are using a controller
+router.get('/', (req, res)=>{
   //Item.find({}, (err, allItem)=>{
-    res.render('selling/account.ejs') //, {
-      //item: allItem,
+    res.render('selling/account.ejs',{
+    Item: Item
     })
-//   })
+ });
 // })
 
 // Item Submission Page
 // This is the page the user inputs the items for sale
 // when the user hits submit they are sent back to the /account page
-router.get('/new', (req, res) => {
-  res.render('selling/posting.ejs')
-});
+router.get('/new', (req, res)=>{
+  res.render('selling/posting.ejs');
+})
 
 // Create
 // This is the post route - used to submit the items for sale
@@ -50,7 +51,7 @@ router.get('/:id/edit', (req, res) => {
 
 //Put
 router.put('/:id', (req, res) => {
-  Item.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, edited) => {
+  Item.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, edited)=>{
     res.redirect('/account')
   })
 })
