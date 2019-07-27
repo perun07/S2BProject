@@ -13,6 +13,8 @@ const Item = require('../models/item');
 router.get('/', async (req, res)=>{
   // if something goes wrong we have the try function
   try{
+    // array of items that are for sale by user
+    // items is the array of the submitted information
   const items = await Item.find();
   //Item.find({}, (err, allItem)=>{
     res.render('selling/account.ejs',{
