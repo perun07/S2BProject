@@ -1,5 +1,4 @@
 const mongoose = require('mongoose'); // require mongoose
-
 const Schema = mongoose.Schema; //Schema Constructor
 
 const itemSchema = new Schema({
@@ -9,7 +8,7 @@ const itemSchema = new Schema({
     quantity: Number, // how many you want to sell
     condition: String, //new, used, damaged, for parts ect
     description: String, //description on wear
-}, { timestamps: true })
+}) //{ timestamps: true })
 
 const Item = mongoose.model('Item', itemSchema);
 
