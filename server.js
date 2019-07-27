@@ -12,7 +12,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
-const itemController = require('./controller/itemController.js');
+const itemController = require('./controller/itemController');
+// this is the route that gets us to the account page
 app.use('/account', itemController);
 
 const PORT = 3000;
