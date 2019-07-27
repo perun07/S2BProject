@@ -34,7 +34,13 @@
 -----------------------------------------------------
 <h2> Order 1001 - July 27 2019 - 1115am PST  </h2>
 <p> Feel free to edit or delete any items in your order by clicking the delete button </p>
- <%= JSON.stringify(items) %>
+ 
+ <%items.forEach(function(item){ %>
+   <p><%= item.title %></p>
+ <% }) %>
+ 
+ 
+ <%=JSON.stringify(items) %>
 <h3> WeBuyYourGames.com would like to offer you : ${$xx} for order 1001 </h3>
 -----------------------------------------------------
 
