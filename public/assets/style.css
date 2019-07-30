@@ -6,3 +6,12 @@ h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
 }
+
+#order {
+    text-align: center;
+    margin: 60px;
+}
+
+#offer {
+    margin: 40px;
+}
