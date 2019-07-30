@@ -36,11 +36,9 @@
 <p> Feel free to edit or delete any items in your order by clicking the delete button </p>
  
  <%items.forEach(function(item){ %>
-   <p><%= item.title %></p>
+   <p><%= item.title %> - <%= item.condition %> - <%= item.quantity %> - <%= item.description %></p>
  <% }) %>
  
- 
- <%=JSON.stringify(items) %>
 <h3> WeBuyYourGames.com would like to offer you : ${$xx} for order 1001 </h3>
 -----------------------------------------------------
 
