@@ -16,6 +16,9 @@ const itemController = require('./controller/itemController');
 // this is the route that gets us to the account page
 app.use('/account', itemController);
 
+// css file
+app.use('/public', express.static('public'));
+
 const PORT = 3000;
 const MONGODB_URI = 'mongodb://localhost/' + 'items';
 

@@ -17,7 +17,7 @@
       If you accept the quote you can get an instant payment using paypal </p>
 
 
-      <form id="contact-form" method="post" action="contact.php" role="form">
+      <form id="contact-form" method="post" action="/account" role="form">
 
     <div class="messages"></div>
 
@@ -27,14 +27,15 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_name">Game Title</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Halo, Super Mario 3ds, Contra" required="required" data-error="Firstname is required.">
+                    <input id="form_name" type="text" name="title" class="form-control" placeholder="Halo, Super Mario 3ds, Contra" required="required" data-error="Firstname is required.">
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
+
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_lastname">Console Type</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nintendo, Sony, Xbox" required="required" data-error="Lastname is required.">
+                    <input id="form_lastname" type="text" name="type" class="form-control" placeholder="Nintendo, Sony, Xbox" required="required" data-error="Lastname is required.">
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
@@ -42,9 +43,9 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_need">Condition</label>
-                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                    <select id="form_need" name="condition" class="form-control" required="required" data-error="Please specify your need.">
                         <option value=""></option>
-                        <option value="Request quotation">New</option>
+                        <option value="new">New</option>
                         <option value="Request order status">Very good used</option>
                         <option value="Request copy of an invoice">Acceptable used</option>
                         <option value="Other">Other</option>
@@ -62,14 +63,12 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send" value="Submit Item for Sale">
+                <input type="submit" class="btn btn-success btn-send" value="Submit">
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <p class="text-muted">
-                    <strong>*</strong> These fields are required. Contact form template by
-                    <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
             </div>
         </div>
     </div>
