@@ -10,6 +10,7 @@ const itemSchema = new Schema({
     title: String, //item name
     condition: String, //new, used, damaged, for parts ect
     description: String, //description on wear
+    available: Boolean,
 }, { timestamps: true })
 
 const Item = mongoose.model('Item', itemSchema);
