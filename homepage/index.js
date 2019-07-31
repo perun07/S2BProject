@@ -8,18 +8,18 @@ function renderGame(results, userInput){
               let gameDescription = results[i].description
               let gamePhoto = results[i].image.screen_large_url
               let gameSummary = results[i].deck
-              let consoleButton1 = results[i].platforms[0].name
-              let consoleButton2 = results[i].platforms[1].name
-              let consoleButton3 = results[i].platforms[2].name
+            //   let consoleButton1 = results[i].platforms[0].name
+            //   let consoleButton2 = results[i].platforms[1].name
+            //   let consoleButton3 = results[i].platforms[2].name
               if (userInput.toLowerCase() == gameName.toLowerCase()){
                 console.log(gameName);
      
                 $('#photo img').attr('src',gamePhoto)
                 $('#card').html(gameDescription)
                 $('#summary').html(gameSummary)
-                $('#console1').text(consoleButton1)
-                $('#console2').text(consoleButton2)
-                $('#console3').text(consoleButton3)
+                // $('#console1').text(consoleButton1)
+                // $('#console2').text(consoleButton2)
+                // $('#console3').text(consoleButton3)
                 // $('#country').text("Country Name: " +countryName)
                 // $('#capital').text("Capital: "+countryCapital)
                 // $('#region').text("Region: "+countryRegion)
