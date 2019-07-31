@@ -1,0 +1,29 @@
+{
+  "name": "s2bproject",
+  "version": "1.0.0",
+  "description": "GA Team Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perun07/S2BProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perun07/S2BProject/issues"
+  },
+  "homepage": "https://github.com/perun07/S2BProject#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "igdb-wrapper-node": "^0.1.1",
+    "method-override": "^3.0.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.6.6",
+    "papaparse": "^5.0.1"
+  }
+}
