@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+<div class="container">
+
+   <div class="row">
+
+    <div class="col-xl-8 offset-xl-2 py-5">
+
+      <h1> Submit your old Games and Consoles for instant cash </h1>
+
+      <p class="lead"> Below you can all the items you want to sell to us.  Pictures are always great. Once you finish your upload we will email you with a instant quote.
+      If you accept the quote you can get an instant payment using paypal </p>
+
+
+      <form id="contact-form" method="post" action="/account" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_name">Game Title</label>
+                    <input id="form_name" type="text" name="title" class="form-control" placeholder="Halo, Super Mario 3ds, Contra" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_lastname">Console Type</label>
+                    <input id="form_lastname" type="text" name="type" class="form-control" placeholder="Nintendo, Sony, Xbox" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_need">Condition</label>
+                    <select id="form_need" name="condition" class="form-control" required="required" data-error="Please specify your need.">
+                        <option value=""></option>
+                        <option value="new">New</option>
+                        <option value="Request order status">Very good used</option>
+                        <option value="Request copy of an invoice">Acceptable used</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Submit">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<form action="/account" method="POST">
+      <p>Console Type</p> <input type="text" name="type" placeholder="Console, Handheld, etc">
+      <p>Platform</p> <input type="text" name="platform" size="55" placeholder="Nintendo, Sony Playstation, Xbox">
+      <p>Title</p> <input type="text" name="title" size="55" placeholder="Super Mario Bros, Halo, Streetfighter">
+      <p>Condition</p> <input type="text" name="condition" size="55" placeholder="Broken, Acceptable, Good, Like New, New">
+      <p>Description</p> <input type="textarea" name="description" size="55" placeholder="Includes original case, manual and disc">
+      <p>Quanity</p> <input type="number" name="quantity" placeholder="1">
+
+      <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <!-- <script type="text/javascript" src="form.js"></script> -->
+   
+  </body>
+</html>

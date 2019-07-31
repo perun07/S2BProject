@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <link href="/public/assets/style.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+  </head>
+  <body>
+
+
+
+<div class="jumbotron text-center">
+  <h1>Account Page</h1>
+  <p>Your Account Page to modify your profile and see your orders</p> 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+  <p> This is the page where the user will "land" after they login or register </p>
+
+  <p> Welcome back (enter name here) </p>
+  
+  <p> WeBuyYourGames.com offers our users the ability to sell their old games 
+    for a competitive price.  Ditch those old games and systems and get paid today </P>
+
+    </div>
+    <div class="col-lg-12">
+      <ul> Here are the steps : 
+    <ul> 1 : Click the button below </ul>
+    <ul> 2 : Enter all the items you have for sale </ul>
+    <ul> 3 : After you submit the items for sale we will send you a quote for your items </ul>
+    <ul> 4 : Accept the price and we will send you a shipping lable to inspect the items and then send money to you </ul>
+    </ul>
+
+    </div>
+    <div class="col-lg-12">
+    <a href="http://localhost:3000/account/new" class="btn btn-info" role="button">Sell Games Now</a>
+    </div>
+
+
+
+    <div class="col-lg-12" id="order">
+       <h3>Your Orders</h3>
+
+<h4> Order #1 </h4>
+<p> Feel free to edit or delete any items in your order by clicking the delete button </p>
+ 
+ <%items.forEach(function(item){ %>
+   <p><%= item.title %> - <%= item.condition %> - <%= item.quantity %> - <%= item.description %></p>
+     <form class="" action="/account/<%=item.id%>?_method=DELETE" method="post">
+          <button type="submit" name="button">Delete</button>
+        </form>
+ <% }) %>
+ 
+<h3 id="offer"> WeBuyYourGames.com would like to offer you : ${$xx} for order 1001 </h3>
+    </div>
+
+
+  </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  </body>
+</html>
