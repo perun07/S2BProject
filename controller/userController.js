@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/users');
 
-router.get("/new", (req, res) => {
-    res.render("users/new.ejs");
+router.get("/register", (req, res) => {
+    res.render("users/register.ejs");
 })
 
 router.get("/login", (req, res) => {
@@ -31,7 +31,7 @@ router.post("/login", async(req, res) => {
         }
         // res.send("trying to login");
     } catch (err) {
-        res.send(err);
+        res.redirect("/users/register");
     }
 
 })
