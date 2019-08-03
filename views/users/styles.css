@@ -1,0 +1,138 @@
+body {
+    background-color: red;
+}
+
+.auth-base {
+    height: 100%;
+    width: 100%;
+}
+
+.auth-login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 514px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 4px 12px 0 rgba(122, 120, 120, 0.5);
+}
+
+.auth-box-header {
+    height: 72px;
+    width: 464px;
+    border-bottom: solid 0.5px grey;
+    margin: auto;
+}
+
+.auth-box-header-text {
+    position: relative;
+    top: 28px;
+    height: 24px;
+    width: 62px;
+    opacity: 0.9;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: black;
+    margin: auto;
+}
+
+.auth-box-action {
+    height: 378px;
+    width: 464px;
+    margin: auto;
+}
+
+.auth-form {
+    height: 301px;
+    width: 464px;
+    margin: auto;
+}
+
+.auth-login-username-section {
+    position: relative;
+}
+
+.auth-login-username-section-base {
+    top: 40px;
+}
+
+.auth-username-label,
+.auth-password-label {
+    position: relative;
+    left: 11px;
+}
+
+.auth-login-password-section {
+    position: absolute;
+}
+
+.auth-login-password-section-base {
+    top: 214px;
+}
+
+.auth-login-password-section-error {
+    top: 278px;
+}
+
+.auth-help-section {
+    position: relative;
+    bottom: 35px;
+    left: 415px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.auth-login-input {
+    position: relative;
+    top: 5px;
+    height: 35px;
+    width: 423px;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid #8fb2c3;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8fb2c3;
+    padding: 11px;
+    margin: auto;
+}
+
+.auth-label {
+    height: 17px;
+    width: 69px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #47565e;
+}
+
+.auth-submit-btn-section {
+    position: absolute;
+}
+
+.auth-submit-btn-section-base {
+    top: 315px;
+}
+
+.auth-submit-btn {
+    height: 45px;
+    width: 447px;
+    border-radius: 4px;
+    background-color: rgb(17, 66, 17);
+    cursor: pointer;
+}

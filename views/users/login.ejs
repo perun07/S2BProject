@@ -1,25 +1,214 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <!-- select2 boxes--> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <meta charset="UTF-8">
-    <title>title</title>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+    
+    <%# <meta charset="UTF-8">
+    <title>title</title> %>
+  <%# <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"> %>
+  <%# <link rel="stylesheet" href="styles.css"> %>
+<style>
+.auth-base {
+    height: 100%;
+    width: 100%;
+}
+
+.auth-login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+    width: 514px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 4px 12px 0 rgba(122, 120, 120, 0.5);
+}
+
+.auth-box-header {
+    height: 72px;
+    width: 464px;
+    border-bottom: solid 0.5px grey;
+    margin: auto;
+}
+
+.auth-box-header-text {
+    position: relative;
+    top: 28px;
+    height: 24px;
+    width: 62px;
+    opacity: 0.9;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: black;
+    margin: auto;
+}
+
+.auth-box-action {
+    height: 378px;
+    width: 464px;
+    margin: auto;
+}
+
+.auth-form {
+    height: 301px;
+    width: 464px;
+    margin: auto;
+}
+
+.auth-login-username-section {
+    position: relative;
+}
+
+.auth-login-username-section-base {
+    top: 40px;
+}
+
+.auth-username-label,
+.auth-password-label {
+    position: relative;
+    left: 11px;
+}
+
+.auth-login-password-section {
+    position: absolute;
+}
+
+.auth-login-password-section-base {
+    top: 214px;
+}
+
+.auth-login-password-section-error {
+    top: 278px;
+}
+
+.auth-help-section {
+    position: relative;
+    bottom: 35px;
+    left: 415px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.auth-login-input {
+    position: relative;
+    top: 5px;
+    height: 35px;
+    width: 423px;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid #8fb2c3;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8fb2c3;
+    padding: 11px;
+    margin: auto;
+}
+
+.auth-label {
+    padding: 10px;
+    height: 17px;
+    width: 69px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #47565e;
+}
+
+.auth-submit-btn-section {
+    position: absolute;
+}
+
+.auth-submit-btn-section-base {
+    top: 315px;
+}
+
+.auth-submit-btn {
+    height: 45px;
+    width: 447px;
+    border-radius: 4px;
+    background-color: rgb(17, 66, 17);
+    cursor: pointer;
+}
+
+.login-btn{
+    top: 120px;
+    position: absolute;
+}</style>
   </head>
+
   <body>
+  <div class="auth-base">
+    <div class="auth-login-box"
+    >
+      <div class="auth-box-header">
+        <div class="auth-box-header-text"
+        >
+          Log In
+        </div>
+      </div>
+      <div class="auth-box-action"
+      >
+    
+        <form action="/users/login" method="POST" class="auth-form">
+          <div class="auth-login-username-section">
+            <div class="auth-label auth-username-label">
+              Username
+            </div>
+            <input class="auth-login-input username"
+              name="username"
+              placeholder="Username"
+              type="text">
+
+          </div>
+          <div class="auth-login-password-section">
+            <div class="auth-label auth-password-label">
+              Password
+            </div>
+            <input 
+              class="auth-login-input auth-password"
+              name="password"
+              placeholder="Password"
+              type="password">
+          </div>
+          <div  class="auth-submit-btn-section"
+          >
+            <%# <div
+              class="auth-submit-btn"> %>
+              <%# <div class="auth-submit-btn-text"> %>
+                <input class="auth-submit-btn-text login-btn" type="submit" value="Login">
+              <%# </div> %>
+            <%# </div> %>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <%# <p>LOGIN FOR PLAYER 1</p>
   <form action="/users/login" method="POST">
         username: <input type="text" name="username">
         password: <input type="password" name="password">
         <input type="submit" value="knock knock">
-        </form>
+        </form> %>
 
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    <!-- <script type="text/javascript" src="form.js"></script> -->  
   </body>
 </html>
