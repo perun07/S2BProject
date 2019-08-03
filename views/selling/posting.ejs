@@ -7,27 +7,56 @@
 
 <div class="container">
 
-   <div class="row">
+<!-- navigation-->
 
+<!-- Navigation Bar-->
+
+        <div class='container'>
+      <nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
+        <a class='navbar-brand' href='#'> WeBuyYourGames.com<img src=''></a>
+        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#menu'>
+        <span class='navbar-toggler-icon'></span>
+        </button>
+    
+        <div class='collapse navbar-collapse' id='menu'>
+              <ul class='navbar-nav ml-auto'>
+                
+                <li class='nav-item'>
+                <a class='nav-link active' href='#'>Homepage</a>
+                </li>
+    
+                    <li class='nav-item'>
+                    <a class='nav-link' href='#'>Contact Us</a>
+                    </li>    
+    
+                    <li class='nav-item'>
+                    <a class='nav-link' href='#'>Your Orders</a>
+                    </li>
+
+              </ul>
+          </div>
+        </nav>
+
+
+<!--end of navigation-->
+
+   <div class="row">
     <div class="col-xl-8 offset-xl-2 py-5">
 
-      <h1> Submit your old Games and Consoles for instant cash </h1>
+      <h1> Sell your old games for cash today!</h1>
 
-      <p class="lead"> Below you can all the items you want to sell to us.  Pictures are always great. Once you finish your upload we will email you with a instant quote.
-      If you accept the quote you can get an instant payment using paypal </p>
+      <p class="lead"> Below you can all the items you want to sell to us.  Once you finish your upload we will email you with a instant quote.
+      If you accept the quote you can get an instant payment using paypal. </p>
 
 
-      <form id="contact-form" method="post" action="/account" role="form">
-
+    <form id="contact-form" method="post" action="/account" role="form">
     <div class="messages"></div>
-
     <div class="controls">
-
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_name">Game Title</label>
-                    <input id="form_name" type="text" name="title" class="form-control" placeholder="Halo, Super Mario 3ds, Contra" required="required" data-error="Firstname is required.">
+                    <input id="form_name" type="text" name="title" class="form-control" placeholder="Halo, Super Mario 3ds, Contra" required="required">
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
@@ -35,7 +64,15 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_lastname">Console Type</label>
-                    <input id="form_lastname" type="text" name="type" class="form-control" placeholder="Nintendo, Sony, Xbox" required="required" data-error="Lastname is required.">
+                    <input id="form_lastname" type="text" name="platform" class="form-control" placeholder="Nintendo, Sony, Xbox">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_lastname">Quantity</label>
+                    <input id="form_lastname" type="number" name="quantity" class="form-control"  required="required">
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
@@ -43,12 +80,11 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_need">Condition</label>
-                    <select id="form_need" name="condition" class="form-control" required="required" data-error="Please specify your need.">
+                    <select id="form_need" name="condition" class="form-control" required="required">
                         <option value=""></option>
                         <option value="new">New</option>
-                        <option value="Request order status">Very good used</option>
-                        <option value="Request copy of an invoice">Acceptable used</option>
-                        <option value="Other">Other</option>
+                        <option value="Used">Used</option>
+                        <option value="Parts/Repair">Parts/Repair</option>
                     </select>
                     <div class="help-block with-errors"></div>
                 </div>
@@ -56,26 +92,14 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-            <div class="col-md-12">
                 <input type="submit" class="btn btn-success btn-send" value="Submit">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-muted">
             </div>
         </div>
     </div>
 
 </form>
 
-<form action="/account" method="POST">
+<!-- <form action="/account" method="POST">
       <p>Console Type</p> <input type="text" name="type" placeholder="Console, Handheld, etc">
       <p>Platform</p> <input type="text" name="platform" size="55" placeholder="Nintendo, Sony Playstation, Xbox">
       <p>Title</p> <input type="text" name="title" size="55" placeholder="Super Mario Bros, Halo, Streetfighter">
@@ -84,7 +108,8 @@
       <p>Quanity</p> <input type="number" name="quantity" placeholder="1">
 
       <input type="submit" value="Submit">
-      </form>
+      </form> -->
+
     </div>
 
     </div>
@@ -92,6 +117,8 @@
   </div>
 
 </div>
+
+
 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
