@@ -10,59 +10,124 @@
   </head>
   <body>
 
+    <!-- Navigation Bar-->
 
+        <div class='container'>
+      <nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
+        <a class='navbar-brand' href='#'> WeBuyYourGames.com<img src=''></a>
+        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#menu'>
+        <span class='navbar-toggler-icon'></span>
+        </button>
+    
+        <div class='collapse navbar-collapse' id='menu'>
+              <ul class='navbar-nav ml-auto'>
+                
+                <li class='nav-item'>
+                <a class='nav-link active' href='#'>Homepage</a>
+                </li>
+    
+                    <li class='nav-item'>
+                    <a class='nav-link' href='#'>Contact Us</a>
+                    </li>    
+    
+                    <li class='nav-item'>
+                    <a class='nav-link' href='#'>Your Orders</a>
+                    </li>
 
-<div class="jumbotron text-center">
-  <h1>Account Page</h1>
-  <p>Your Account Page to modify your profile and see your orders</p> 
-</div>
+              </ul>
+          </div>
+        </nav>
+    
+    <!--Beginning of Jumbotron -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
+        <div class='jumbotron'>
+            <h1 class="display-4"> Account Page</h1>
+            <p class='lead'> Ready to start selling your old games for cash?  Click the button below to sell your games for quick cash</p>
+            <p class='lead'>
+                <a class='btn btn-primary btn-lg' href='http://localhost:3000/account/new' role='button'>Sell Games</a>
+            </p>
+        </div>
+    <!-- End of the jumbotron -->
+    <!-- Three columns with steps-->
 
-  <p> This is the page where the user will "land" after they login or register </p>
+    <div class='row'>
+      <div class='col-sm-12 col-md-4'>
+        <div class='card mb-4'>
+          <div class='card-body text-center'>
+            <h3 class='card-title'>Step 1</h3>
+            <p class='card-text'>Step one is to sign up for an account.  This will allow our company to send you a price quote, send shipping label and provide you 24 hour paypal payment</p>
+          </div>
+        </div>
+      </div>
+      <div class='col-sm-12 col-md-4'>
+          <div class='card mb-4'>
+            <div class='card-body text-center'>
+              <h3 class='card-title'>Step 2</h3>
+              <p class='card-text'>Click on this link to start selling your games today.  We offer you the best pricing on your old games</p>
+              <a href='http://localhost:3000/account/new' class='card-link'>Sell Today!</a>
+            </div>
+          </div>
+        </div>
+        <div class='col-sm-12 col-md-4'>
+            <div class='card'>
+              <div class='card-body text-center'>
+                <h3 class='card-title'>Step 3</h3>
+                <p class='card-text'>Once you submit the games you would like to sell we will email you with a quote for the games within 24 hours.  If the offer </p>
+                <a href='#' class='card-link'>Have Questions?  Email us</a>
+              </div>
+            </div>
+          </div>
+    </div> <!-- End of the step area-->
 
-  <p> Welcome back (enter name here) </p>
-  
-  <p> WeBuyYourGames.com offers our users the ability to sell their old games 
-    for a competitive price.  Ditch those old games and systems and get paid today </P>
+    <div class='row mt-sm-4 mt-md-0'>
+      <div class='col-sm-12 col-md-8 text-sm-center text-md-left'>
+        <h3>Games Posted for Sale</h3>
+        <p class='lead'> Below is your previous games you have listed for sale</p>
+        
+        <%items.forEach(function(item){ %>
+        
+        <table>
+          <tr class='table'>
+              <th>Item Title: </th>
+              <th>Console Type:</th>
+              <th>Condition:</th>
+              <th>Quantity:</th>
+              <form class="" action="/account/<%=item.id%>?_method=DELETE" method="post">
+              <button type="submit" class='btn btn-primary btn-sm' name="button">Delete</button>
+              </form>
+          </tr>
+              <tr>
+              <td><%= item.title %></td>
+              <td><%= item.platform %></td>
+              <td><%= item.condition %></td>
+              <td><%= item.quantity %></td>
+              </tr>
 
+        </table>
+        <% }) %>
+
+      </div>
+
+      <div class='col-sm-12 col-md-4'>
+        <h3 class='mb-4'> Menu </h3>
+        <ul class='nav flex-column nav-pills'>
+          <li class='nav-item'>
+            <a class='nav-link ' href='#'>Home</a>
+          </li>
+             <li class='nav-item'>
+              <a class='nav-link' href='#'>Past Orders</a>
+            </li>            
+              <li class='nav-item'>
+                <a class='nav-link' href='#'>Contact Us</a>
+              </li>
+        </ul>
+      </div>
     </div>
-    <div class="col-lg-12">
-      <ul> Here are the steps : 
-    <ul> 1 : Click the button below </ul>
-    <ul> 2 : Enter all the items you have for sale </ul>
-    <ul> 3 : After you submit the items for sale we will send you a quote for your items </ul>
-    <ul> 4 : Accept the price and we will send you a shipping lable to inspect the items and then send money to you </ul>
-    </ul>
-
-    </div>
-    <div class="col-lg-12">
-    <a href="http://localhost:3000/account/new" class="btn btn-info" role="button">Sell Games Now</a>
-    </div>
 
 
-
-    <div class="col-lg-12" id="order">
-       <h3>Your Orders</h3>
-
-<h4> Order #1 </h4>
-<p> Feel free to edit or delete any items in your order by clicking the delete button </p>
- 
- <%items.forEach(function(item){ %>
-   <p><%= item.title %> - <%= item.condition %> - <%= item.quantity %> - <%= item.description %></p>
-     <form class="" action="/account/<%=item.id%>?_method=DELETE" method="post">
-          <button type="submit" name="button">Delete</button>
-        </form>
- <% }) %>
- 
-<h3 id="offer"> WeBuyYourGames.com would like to offer you : ${$xx} for order 1001 </h3>
-    </div>
+    </div> <!--End of the container div-->
 
 
-  </div>
-</div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

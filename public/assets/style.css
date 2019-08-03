@@ -7,11 +7,24 @@ h1 {
     font-size: 40px;
 }
 
+.jumbotron {
+    text-align: center;
+}
+
+.steps-row {
+    background: grey;
+}
+
 #order {
     text-align: center;
     margin: 60px;
+    background: grey;
 }
 
 #offer {
     margin: 40px;
+}
+
+.navbar-brand img {
+    height: 2rem;
 }
