@@ -19,13 +19,16 @@ const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 const userController = require('./controller/userController');
 const itemController = require('./controller/itemController');
+const adminController = require('./controller/adminController');
 // this is the route that gets us to the account page
 app.use('/account', itemController);
+
 
 // css file
 app.use('/public', express.static('public'));
 
 app.use('/users', userController);
+app.use('/admin', adminController);
 const PORT = 3000;
 const MONGODB_URI = 'mongodb://localhost/' + 'items';
 
