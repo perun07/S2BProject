@@ -11,35 +11,74 @@
     <title>WBYG</title>
   </head>
   <header>
+<div class="container">
         <h1>We Buy Your Games</h1>
-        <ul>
+    </div>
+<!-- Navigation Bar-->
+
+<div class='container'>
+        <nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
+            <a class='navbar-brand' href='#'> WeBuyYourGames.com<img src=''></a>
+            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#menu'>
+            <span class='navbar-toggler-icon'></span>
+            </button>
+                  
+            <div class='collapse navbar-collapse' id='menu'>
+                <ul class='navbar-nav ml-auto'>
+                              
+                    <li class='nav-item'>
+                    <a class='nav-link active' href='index.html'>Homepage</a>
+                     </li>
+                  
+                    <li class='nav-item'>
+                    <a class='nav-link' href='/users/login'>Login</a>
+                    </li>    
+                  
+                    <li class='nav-item'>
+                    <a class='nav-link' href='/users/register'>Register</a>
+                    </li>
+              
+                    <li class='nav-item'>
+                            <a class='nav-link' href='/account'>Account</a>
+                            </li>
+
+                    <li class='nav-item'>
+                            <a class='nav-link' href='/account/new'>Posting</a>
+                            </li>
+                    </ul>
+                    </div>
+                    </nav>
+        <!-- <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html">Register/Login</a></li>
                 <li><a href="index.html">Product</a></li>
                 <li><a href="index.html">Admin</a></li>
-              </ul>
+              </ul> -->
 
         <h4>About the Company</h2>
-        <h5>We buy games from consumers at a reaonsible price based upon current market volumes. This organization was founded by Paul, Ryan, and Travis. Please use the search below to look up the game you would like to sell and information concerning the game. If you have a specific platform please feel free to use the drop down menu to select.</h5>
+        <h5>We buy games from consumers at a reasonable price based upon current market volumes. This organization was founded by Paul, Ryan, and Travis. Please use the search below to look up the game you would like to sell and information concerning the game. If you have a specific platform please feel free to use the drop down menu to select.</h5>
     </header>
   <body>
-
+<div class="container">
     <form id="game-search">
             <input type="text" id="search-term">
-            <input type="submit" value="Search" placeholder="Enter Product Name">
+            <input type="submit" class='btn btn-primary btn-sm' value="Search" placeholder="Enter Game Name">
     </form>
+</div>
+<div class="container">
+<div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Console
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" id="console1"></a>
+          <a class="dropdown-item" id="console2"></a>
+          <a class="dropdown-item" id="console3"></a>
+        </div>
+      </div>
 
-    <div class="dropdown">
-            
-            <button class="dropbtn">Console</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a id="console1"></a>
-              <a id="console2"></a>
-              <a id="console3"></a>
-            </div>
-          </div>
 
-    <div id="priceItem">Our Purchase Price $</div>
+    <div class="h1" id="priceItem">Our Purchase Price $</div>
 
     <div id="summary"></div>
 
@@ -48,7 +87,7 @@
             <img src=""/>
     </div>
     <div id="card"></div>
-   
+</div>
 
     <!-- Optional JavaScript -->
 

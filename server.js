@@ -40,3 +40,8 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.once('open', () => {
     console.log('connected to mongo');
 })
+
+//linking other pages//
+app.set('view engine', 'ejs');
+app.set('views');
+app.use('/homepage', express.static('homepage'));
