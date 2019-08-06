@@ -30,13 +30,14 @@ app.use('/public', express.static('public'));
 app.use('/users', userController);
 app.use('/admin', adminController);
 const PORT = process.env.PORT || 3000;
-// const MONGODB_URI = 'mongodb://localhost/' + 'items';
+const MONGODB_URI = 'mongodb://localhost/' + 'items';
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT);
 });
 
-mongoose.connect('mongodb://perun07:UpqIbVgOkl0cajHm@cluster0-shard-00-00-qjm1o.mongodb.net:27017,cluster0-shard-00-01-qjm1o.mongodb.net:27017,cluster0-shard-00-02-qjm1o.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true });
+// mongoose.connect('mongodb://perun07:UpqIbVgOkl0cajHm@cluster0-shard-00-00-qjm1o.mongodb.net:27017,cluster0-shard-00-01-qjm1o.mongodb.net:27017,cluster0-shard-00-02-qjm1o.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.once('open', () => {
     console.log('connected to mongo');
 })
@@ -46,7 +47,7 @@ app.set('view engine', 'ejs');
 app.set('views');
 app.use('/homepage', express.static('homepage'));
 
-Promise.reject(new Error('woops'))
+// Promise.reject(new Error('woops'))
 //mongodb
 
 
