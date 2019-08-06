@@ -4,7 +4,8 @@
     "description": "GA Team Project",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start" : "node server.js"
     },
     "repository": {
         "type": "git",
@@ -23,5 +24,7 @@
         "igdb-wrapper-node": "^0.1.1",
         "method-override": "^3.0.0",
         "mongoose": "^5.6.6"
-    }
+    },
+    "author" : "Ryan, Paul, & Travis",
+    "license" : "Dont Touch Our Stuff Yo!"
 }
