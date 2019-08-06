@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box
   }
   
@@ -16,17 +16,17 @@
     margin: 0 auto;
     padding: 16px;
     border: black;
-  }
+  } */
   
   h1 {
     text-align: center;
     padding: 1.5rem 2.5rem;
-    background-image: linear-gradient(120deg, #c2e6fb 0%, #053d2a 100%);
+    background-image: linear-gradient(120deg, #c2e6fb 0%, #0004ff 100%);
     font-size: 1.5rem;
     color: white;
   }
   
-  img {
+  /* img {
     display: block;
     margin: 1rem auto;
     max-width: 100%;
@@ -45,7 +45,6 @@
   #card {
     margin: 1rem;
     background: white;
-    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     border-radius: 12px;
     overflow: hidden;
     transition: all .2s linear;
@@ -98,7 +97,7 @@
 
   #price-search{
       padding: 16px 16px 16px 16px;
-  }
+  } */
 
   /* Dropdown Button */
 .dropbtn {
