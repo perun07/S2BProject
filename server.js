@@ -46,7 +46,7 @@ app.set('view engine', 'ejs');
 app.set('views');
 app.use('/homepage', express.static('homepage'));
 
-
+Promise.reject(new Error('woops'))
 //mongodb
 
 
