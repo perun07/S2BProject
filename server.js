@@ -1,15 +1,17 @@
 console.log("this is the server.js file");
 
+//.env
+require('dotenv').config()
+
 //Dependencies
 const express = require('express');
 const app = express();
 app.use(express.urlencoded({ extended: true }))
 
-//.env
-require('dotenv').config()
+
 
 //connecting
-// const connectionString = process.env.MONGODB_URI;
+const connectionString = process.env.MONGODB_URI;
 
 //Mongoose
 const mongoose = require('mongoose');
@@ -35,7 +37,7 @@ app.use('/public', express.static('public'));
 app.use('/users', userController);
 app.use('/admin', adminController);
 const PORT = process.env.PORT || 3000;
-const mongoURI = process.env.MONGODB_URI
+const MONGODB_URI = process.env.MONGODB_URI
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT);
@@ -51,9 +53,9 @@ app.use(session({
   }))
 
 // mongoose.connect(uri, { useNewUrlParser: true });
-mongoose.connect(mongoURI, { useNewUrlParser: true });
-mongoose.connection.once('open', () => {
-    console.log('connected to mongo');
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
+mongoose.connection.once ('open', () => {
+  console.log('connected to mongo')
 })
 
 //linking other pages//
