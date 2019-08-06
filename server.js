@@ -5,6 +5,12 @@ const express = require('express');
 const app = express();
 app.use(express.urlencoded({ extended: true }))
 
+//.env
+require('dotenv').config()
+
+//connecting
+// const connectionString = process.env.MONGODB_URI;
+
 //Mongoose
 const mongoose = require('mongoose');
 
@@ -26,20 +32,26 @@ app.use('/account', itemController);
 
 // css file
 app.use('/public', express.static('public'));
-
 app.use('/users', userController);
 app.use('/admin', adminController);
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = 'mongodb://localhost/' + 'items';
+const mongoURI = process.env.MONGODB_URI
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT);
 });
 
-const uri = "mongodb://perun07:UpqIbVgOkl0cajHm@cluster0-shard-00-00-qjm1o.mongodb.net:27017,cluster0-shard-00-01-qjm1o.mongodb.net:27017,cluster0-shard-00-02-qjm1o.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+// const uri = "mongodb://perun07:UpqIbVgOkl0cajHm@cluster0-shard-00-00-qjm1o.mongodb.net:27017,cluster0-shard-00-01-qjm1o.mongodb.net:27017,cluster0-shard-00-02-qjm1o.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 
-// mongoose.connect('mongodb://perun07:UpqIbVgOkl0cajHm@cluster0-shard-00-00-qjm1o.mongodb.net:27017,cluster0-shard-00-01-qjm1o.mongodb.net:27017,cluster0-shard-00-02-qjm1o.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true });
-mongoose.connect(uri, { useNewUrlParser: true });
+// secret is stored in .env
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  }))
+
+// mongoose.connect(uri, { useNewUrlParser: true });
+mongoose.connect(mongoURI, { useNewUrlParser: true });
 mongoose.connection.once('open', () => {
     console.log('connected to mongo');
 })
@@ -61,4 +73,3 @@ app.use('/homepage', express.static('homepage'));
 //   // perform actions on the collection object
 //   client.close();
 // });
-

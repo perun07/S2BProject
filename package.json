@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start" : "node server.js"
+        "start": "node server.js"
     },
     "repository": {
         "type": "git",
@@ -17,12 +17,14 @@
     },
     "homepage": "https://github.com/perun07/S2BProject#readme",
     "dependencies": {
+        "dotenv": "^8.0.0",
         "ejs": "^2.6.2",
+        "env": "0.0.2",
         "express": "^4.17.1",
         "express-session": "^1.16.2",
         "igdb-wrapper-node": "^0.1.1",
         "method-override": "^3.0.0",
         "mongoose": "^5.6.6"
     },
-    "author" : "Ryan, Paul, & Travis"
+    "author": "Ryan, Paul, & Travis"
 }
