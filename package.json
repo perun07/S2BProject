@@ -4,13 +4,13 @@
     "description": "GA Team Project",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start" : "node server.js"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/perun07/S2BProject.git"
     },
-    "author": "",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/perun07/S2BProject/issues"
@@ -23,5 +23,6 @@
         "igdb-wrapper-node": "^0.1.1",
         "method-override": "^3.0.0",
         "mongoose": "^5.6.6"
-    }
+    },
+    "author" : "Ryan, Paul, & Travis"
 }

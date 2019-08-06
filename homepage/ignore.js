@@ -1,4 +1,4 @@
-console.log("Home Page Beginnings");
+// console.log("Home Page Beginnings");
 
 //ALLL OF MY WASTED PREWORK WOHOO>>>>>////
 
@@ -117,26 +117,26 @@ console.log("Home Page Beginnings");
   
 //     xhr.send();
 //   })
-  $('#price-search').submit(function(event) {
-    event.preventDefault()
-    userInput = $('#search-term').val()
-    $('#search-term').val("")
-  $.ajax({
-    // url: `http://www.giantbomb.com/api/search?&query${userInput}`,
-    url: `http://www.giantbomb.com/api/search?api_key=050a497bc4687e2c26c5904e405dedfbc334fdb1&format=json&query=${userInput}&resources=game`,
-    dataType: "jsonp",
-    jsonp: 'json_callback',
-    data: {
-      api_key: '050a497bc4687e2c26c5904e405dedfbc334fdb1',
-      format: 'jsonp',
-    },
-    success: function(res) {
-    //   callback(res);
-    console.log(res);
+//   $('#price-search').submit(function(event) {
+//     event.preventDefault()
+//     userInput = $('#search-term').val()
+//     $('#search-term').val("")
+//   $.ajax({
+//     // url: `http://www.giantbomb.com/api/search?&query${userInput}`,
+//     url: `http://www.giantbomb.com/api/search?api_key=050a497bc4687e2c26c5904e405dedfbc334fdb1&format=json&query=${userInput}&resources=game`,
+//     dataType: "jsonp",
+//     jsonp: 'json_callback',
+//     data: {
+//       api_key: '050a497bc4687e2c26c5904e405dedfbc334fdb1',
+//       format: 'jsonp',
+//     },
+//     success: function(res) {
+//     //   callback(res);
+//     console.log(res);
     
-    }
-})
-  });
+//     }
+// })
+//   });
 // $('#price-search').submit(function(event){
 //     event.preventDefault()
 //     userInput = $('#search-term').val()
