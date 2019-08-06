@@ -11,7 +11,6 @@
         "type": "git",
         "url": "git+https://github.com/perun07/S2BProject.git"
     },
-    "author": "",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/perun07/S2BProject/issues"
@@ -25,6 +24,5 @@
         "method-override": "^3.0.0",
         "mongoose": "^5.6.6"
     },
-    "author" : "Ryan, Paul, & Travis",
-    "license" : "Dont Touch Our Stuff Yo!"
+    "author" : "Ryan, Paul, & Travis"
 }
