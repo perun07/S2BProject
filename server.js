@@ -68,15 +68,4 @@ app.use('/homepage', express.static('homepage'));
 app.listen(PORT, () => {
   console.log('listening on port', PORT);
 });
-// Promise.reject(new Error('woops'))
-//mongodb
 
-
-// var MongoClient = require('mongodb').MongoClient;
-
-
-// MongoClient.connect(uri, function(err, client) {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
