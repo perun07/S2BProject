@@ -7,7 +7,7 @@ const itemSchema = new Schema({
     title: String, //item name
     quantity: Number, // how many you want to sell
     condition: String, //new, used, damaged, for parts ect
-    description: String //description on wear
+    description: String //description on wear - Not using the description form in the item.js file
 }) //{ timestamps: true })
 
 const Item = mongoose.model('Item', itemSchema);
