@@ -10,4 +10,4 @@ to WeBuyYourGames.com and that information to be held in a database.  Hypothetic
 
 This model is based on the Decluttr app which offers money for old items that are taking up space.
 
-Due August 5th
+This app uses MongoDB, Express and NodeJS to build a functional app.
