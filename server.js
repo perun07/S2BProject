@@ -42,9 +42,7 @@ app.use('/admin', adminController);
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI
 
-app.listen(PORT, () => {
-    console.log('listening on port', PORT);
-});
+
 
 // const uri = "mongodb://perun07:UpqIbVgOkl0cajHm@cluster0-shard-00-00-qjm1o.mongodb.net:27017,cluster0-shard-00-01-qjm1o.mongodb.net:27017,cluster0-shard-00-02-qjm1o.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
 
@@ -66,6 +64,10 @@ app.set('view engine', 'ejs');
 app.set('views');
 app.use('/homepage', express.static('homepage'));
 
+
+app.listen(PORT, () => {
+  console.log('listening on port', PORT);
+});
 // Promise.reject(new Error('woops'))
 //mongodb
 
