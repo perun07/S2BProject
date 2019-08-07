@@ -1,12 +1,12 @@
-// console.log("this is the server.js file");
+console.log("this is the server.js file");
 
-// //.env
-// require('dotenv').config()
+//.env
+require('dotenv').config()
 
-// //Dependencies
-// const express = require('express');
-// const app = express();
-// //parse
+//Dependencies
+const express = require('express');
+const app = express();
+//parse
 
 //heroku code//
 app.use(express.urlencoded({ extended: true }))
