@@ -38,11 +38,7 @@ app.use('/admin', adminController);
 
 //setting port and mongo
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI
-
-
-
-// const uri = "mongodb://perun07:UpqIbVgOkl0cajHm@cluster0-shard-00-00-qjm1o.mongodb.net:27017,cluster0-shard-00-01-qjm1o.mongodb.net:27017,cluster0-shard-00-02-qjm1o.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'items';
 
 // secret is stored in .env
 app.use(session({
