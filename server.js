@@ -38,7 +38,7 @@ app.use('/admin', adminController);
 
 //setting port and mongo
 const PORT = process.env.PORT || 3000;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'items';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/' + 'items';
 
 // secret is stored in .env
 app.use(session({
