@@ -1,4 +1,7 @@
 console.log("Home Page Beginnings");
+//.env
+// require('dotenv').config({ path: '/s2bproject.env'});
+
 let userInput = ""
 
 function renderGame(results, userInput){
@@ -25,6 +28,7 @@ function renderGame(results, userInput){
       }
 
 
+// const gameAPI = process.env.api_key
 
 
 //Game API Call
@@ -38,7 +42,7 @@ function renderGame(results, userInput){
     dataType: "jsonp",
     jsonp: 'json_callback',
     data: {
-      api_key: '050a497bc4687e2c26c5904e405dedfbc334fdb1',
+    //   api_key: '',
       format: 'jsonp',
     },
     success: function(res) {
