@@ -11,11 +11,17 @@ router.get("/login", (req, res) => {
 })
 
 router.post("/", async(req, res) => {
+    if (!req.session.userID){
+        res.redirect("users/login")
+    }
     try {
         const newUser = await User.create(req.body);
         req.session.userId = newUser._id
+        req.session.user=newuser
         res.redirect("/account");
     } catch (err) {
+        console.log(err);
+        
         res.send(err);
     }
 })
@@ -24,14 +30,21 @@ router.post("/login", async(req, res) => {
     console.log(req.body);
     try {
         const userFromDb = await User.findOne({ username: req.body.username })
-        console.log('userFromDb', userFromDb);
+        // console.log('userFromDb', userFromDb);
         if (userFromDb.password === req.body.password) {
             req.session.userId = userFromDb._id;
+            // res.send("checking")
             res.redirect("/account");
+        }else {
+            req.session.userId=userFromDb._id
+            req.session.user=userFromDb
+            res.send("bad login")
         }
         // res.send("trying to login");
     } catch (err) {
-        res.redirect("/users/register");
+        res.redirect("/account");
+        console.log("check this out");
+        
     }
 
 })
