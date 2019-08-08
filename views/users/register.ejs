@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
-    <!-- select2 boxes-->
+  <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+    <!-- select2 boxes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <title>Register</title>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+  <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"> -->
   
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <link rel="stylesheet" type="text/css" href="/homepage/style.css">
-  <style>
+  <!-- <style>
 .auth-base {
     height: 100%;
     width: 100%;
@@ -159,15 +159,15 @@
     top: 120px;
     left: 300px;
 }
-</style>
+</style> -->
   </head>
   <header>
         <div class="container">
                 <h1>We Buy Your Games</h1>
-            </div>
+
         <!-- Navigation Bar-->
         
-        <div class='container'>
+
                 <nav class='navbar navbar-expand-lg navbar-dark bg-primary'>
                     <a class='navbar-brand' href='#'> WeBuyYourGames.com<img src=''></a>
                     <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#menu'>
@@ -199,10 +199,9 @@
                             </ul>
                             </div>
                             </nav>
-                            </div>
                             </header>
   <body>
-  <div class="auth-base">
+  <!-- <div class="auth-base">
     <div class="auth-login-box"
     >
       <div class="auth-box-header">
@@ -212,39 +211,49 @@
         </div>
       </div>
       <div class="auth-box-action"
-      >
-  <form action="/users/" method="POST">
-  <div class="auth-login-username-section">
-  <div class="auth-label auth-username-label">
-        Username: 
-        </div> <input class="auth-login-input username" type="text" name="username">
-        </div>
+      > -->
+<div class=container>
+  <form action="/users/login" method="POST">
+  <!-- <div class="auth-login-username-section">
+  <div class="auth-label auth-username-label"> -->
+        <!-- Username:  -->
+        <!-- </div>  -->
+        <!-- <input class="auth-login-input username" type="text" name="username"> -->
+        Username<input type="text" name="username">
+        Password<input type="password" name="password">
+        Email<input type="text" name="email">
+        Name<input type="text" name="name">
+        <!-- </div>
+        <!-- <div class="auth-login-username-section">
+        <div class="auth-label auth-username-label"> --> -->
+        <!-- Password:  -->
+        <!-- </div>  -->
+        <!-- <input class="auth-login-input username" type="password" name="password"> -->
+        <!-- </div>
         <div class="auth-login-username-section">
-        <div class="auth-label auth-username-label">
-        Password: 
-        </div> <input class="auth-login-input username" type="password" name="password">
-        </div>
-        <div class="auth-login-username-section">
-        <div class="auth-label auth-username-label">
-        Email: 
-        </div><input  class="auth-login-input username" type="text" name="email">
-        </div>
-        <div class="auth-login-username-section">
-        <div class="auth-label auth-username-label">
-        Name: 
-        </div> 
-        <input class="auth-login-input username" type="text" name="name">
-        <div>
-        <input  class="auth-submit-btn-text login-btn btn btn-primary btn-sm" type="submit" value="Register">
-        
-        </form>
-<form class='gotologin' action="/users/" method="GET">
+        <div class="auth-label auth-username-label"> -->
+        <!-- Email:  -->
+        <!-- </div> -->
+        <!-- <input  class="auth-login-input username" type="text" name="email"> -->
+        <!-- </div> -->
+        <!-- <div class="auth-login-username-section">
+        <div class="auth-label auth-username-label"> -->
+        <!-- Name:  -->
+        <!-- </div>  -->
+        <!-- <input class="auth-login-input username" type="text" name="name"> -->
+        <!-- <div> -->
+        <!-- <input  class="auth-submit-btn-text  -->
+        <input class = "btn btn-primary btn-sm" type="submit" value="Register">
         <button type="submit" class='btn btn-primary btn-sm' method ="GET" formaction="/users/login">Login</button>
-</form>
- </div>
+      
+        </form>
+<!-- <form class='gotologin' action="/users/" method="GET"> -->
+        
+<!-- </form> -->
+ <!-- </div>
     </div>
-  </div>
-  
+  </div> -->
+</div>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  <!-- <script type="text/javascript" src="form.js"></script> -->  
