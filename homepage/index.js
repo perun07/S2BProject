@@ -38,7 +38,7 @@ function renderGame(results, userInput){
     $('#search-term').val("")
   $.ajax({
     // url: `http://www.giantbomb.com/api/search?&query${userInput}`,
-    url: `http://www.giantbomb.com/api/search?api_key=050a497bc4687e2c26c5904e405dedfbc334fdb1&format=json&query=${userInput}&resources=game`,
+    url: `https://www.giantbomb.com/api/search?api_key=050a497bc4687e2c26c5904e405dedfbc334fdb1&format=json&query=${userInput}&resources=game`,
     dataType: "jsonp",
     jsonp: 'json_callback',
     data: {
