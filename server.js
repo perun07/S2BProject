@@ -95,6 +95,10 @@ app.use(session({
 //     resave: false,
 //     saveUninitialized: false
 // }))
+
+var promise = new Promise(function(resolve) {
+  // kjjdjf(); // this function does not exist
+});
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 const userController = require('./controller/userController');
@@ -114,9 +118,7 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/' + 'i
 // const PORT = 3000;
 // const MONGODB_URI = 'mongodb://localhost/' + 'items';
 
-app.listen(PORT, () => {
-    console.log('listening on port', PORT);
-});
+
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.once('open', () => {
@@ -127,3 +129,7 @@ mongoose.connection.once('open', () => {
 app.set('view engine', 'ejs');
 app.set('views');
 app.use('/homepage', express.static('homepage'));
+
+app.listen(PORT, () => {
+  console.log('listening on port', PORT);
+});
